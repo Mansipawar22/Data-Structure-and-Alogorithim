@@ -82,6 +82,7 @@ int FindMajority(int arr[], int size)
 int main()
 {
     int size;
+    cout << "Hello World";
     cout << "Enter size of Array: ";
     cin >> size;
     int arr[size];
