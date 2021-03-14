@@ -3,7 +3,8 @@
 using namespace std;
 
 
-//My Solution
+//My Solution 
+//Time Complexity O(n)
 int MinGropFlip(bool arr[], int size)
 {
     int Zeros = 0;
@@ -71,7 +72,28 @@ int MinGropFlip(bool arr[], int size)
     }
 }
 
-
+//Efficient Solution
+void PrintGroup(bool arr[], int size)
+{
+    for(int i=1;i<size;i++)
+    {
+        if(arr[i]!=arr[i-1])
+        {
+            if (arr[i]!= arr[0])
+            {
+                cout << "From " << i << " to ";
+            }
+            else
+            {
+                cout << i-1 << endl;
+            }
+        }
+    }
+    if(arr[size-1]!=arr[0])
+    {
+        cout << size-1 << endl;
+    }
+}
 
 int main()
 {
@@ -84,6 +106,6 @@ int main()
         cin >> arr[i];
     }
 
-    MinGropFlip(arr, size);
+    PrintGroup(arr, size);
     return 0;
 }
