@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int CheckSubarrayGivenSum(int arr[], int size, int sum)
+int CheckSubarrayGivenSum1(int arr[], int size, int sum)
 {
     for (int i = 0; i < size; i++)
     {
@@ -16,6 +16,30 @@ int CheckSubarrayGivenSum(int arr[], int size, int sum)
         }
     }
     return false;
+}
+
+//Efficient solution
+int CheckSubarrayGivenSum2(int arr[], int size, int sum)
+{
+    int curr_sum = arr[0];
+    int starting = 0;
+    for (int ending = 1; ending < size; ending++)
+    {
+        while ((curr_sum > sum) && (starting < ending-1))
+        {
+            curr_sum -= arr[starting];
+            starting++;
+        }
+        if (curr_sum == sum)
+        {
+            return true;
+        }
+        if (ending < size)
+        {
+            curr_sum += arr[ending];
+        }
+    }
+    return (curr_sum == sum);
 }
 
 int main()
@@ -32,6 +56,6 @@ int main()
     {
         cin >> arr[i];
     }
-    cout << CheckSubarrayGivenSum(arr, size, sum);
+    cout << CheckSubarrayGivenSum2(arr, size, sum);
     return 0;
 }
