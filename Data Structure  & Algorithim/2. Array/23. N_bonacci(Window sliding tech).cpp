@@ -6,6 +6,7 @@ using namespace std;
 //Totally Done by me(My Solution).
 //Time Colexity O(n).
 //Based on Window Sliding Techniqe
+//
 int N_bonacci(int arr[],int size, int n)
 {
     for (int i = 0; i < n; i++)
@@ -16,6 +17,7 @@ int N_bonacci(int arr[],int size, int n)
         }
         else{
             arr[i] = 0;
+            
         }
     }
     int curr_sum = arr[n-1];

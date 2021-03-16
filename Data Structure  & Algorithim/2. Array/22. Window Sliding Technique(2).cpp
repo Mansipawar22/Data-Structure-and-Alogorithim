@@ -2,7 +2,7 @@
 
 using namespace std;
 
-
+//Naive Solution
 int CheckSubarrayGivenSum1(int arr[], int size, int sum)
 {
     for (int i = 0; i < size; i++)
