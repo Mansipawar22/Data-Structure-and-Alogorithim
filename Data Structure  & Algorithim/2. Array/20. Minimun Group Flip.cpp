@@ -73,7 +73,7 @@ int MinGropFlip(bool arr[], int size)
 }
 
 //Efficient Solution
-
+//T(n) => O(n)
 void PrintGroup(bool arr[], int size)
 {
     for(int i=1;i<size;i++)
