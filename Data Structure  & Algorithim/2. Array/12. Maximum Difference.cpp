@@ -7,7 +7,7 @@ using namespace std;
 //A(s) => O(1)
 int MaxDifference(int arr[], int size)
 {
-    int res = arr[1] - arr[0]; // we also write res = 0;
+    int res = arr[1] - arr[0]; // we can also write res = 0;
     for (int i = 0; i < size; i++)
     {
         for (int j = i+1; j < size; j++)

@@ -4,7 +4,7 @@ using namespace std;
 
 
 //Totally Done by me(My Solution).
-//Time Colexity O(n).
+//Time Colexity O(m), where m is the Size of the array.
 //Based on Window Sliding Techniqe
 //
 int N_bonacci(int arr[],int size, int n)
