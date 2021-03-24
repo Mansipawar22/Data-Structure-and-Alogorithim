@@ -84,7 +84,7 @@ int firstOuccrance3(int arr[], int size, int num)
             }
         }
     }
-    
+    return -1;
 }
 
 int main()
