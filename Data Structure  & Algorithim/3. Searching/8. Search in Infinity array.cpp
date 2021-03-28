@@ -46,7 +46,7 @@ int FindHigh(int arr[], int num)
 int main()
 {
     int arr[] = {10, 12, 13, 14, 17,19,20,23,26,29,30,37,39,41,43,48,49,61,67,69,70};
-    int num = 22;
+    int num = 26;
     cout << FindHigh(arr, num);
     return 0;
 }
