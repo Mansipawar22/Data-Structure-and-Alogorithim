@@ -61,7 +61,6 @@ int getAPeak(int arr[], int size)
 
 int main()
 {
-    //cout << "Hello World" << endl;
     int arr[] = {10, 20, 4, 5, 23, 90, 67};
     int size = 7;
     cout << Findpeak(arr, size) << endl;
