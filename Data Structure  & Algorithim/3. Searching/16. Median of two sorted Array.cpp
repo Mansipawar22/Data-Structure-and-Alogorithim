@@ -64,7 +64,7 @@ double isMedian2(int arr1[], int arr2[], int s1, int s2)
             end1 = i1-1;
         }
         else{
-            begin = i1+1;
+            begin1 = i1+1;
         }
     }
 }
@@ -73,7 +73,7 @@ double isMedian2(int arr1[], int arr2[], int s1, int s2)
 int main()
 {
     int arr1[] = {10,20,30,40,50};
-    int arr2[] = {5,15,25,35,45,55,65,75};
+    int arr2[] = {5,15,25,35,45,55,65,75,85};
     int s1 = sizeof(arr1)/sizeof(arr1[0]);
     int s2 = sizeof(arr2)/sizeof(arr2[0]);
     int s3 = s1 + s2;
