@@ -50,38 +50,6 @@ int Merge(int arr[], int l, int m, int r)
     
 }
 
-/*int Merge(int arr[], int l, int m, int r)
-{
-    int temp[r+1];
-    int count = 0;
-    int i = 0;
-    int j = m+1;
-    while (i<=m && j<=r && count <= r)
-    {
-        if(arr[i] < arr[j])
-        {
-            temp[count++] = arr[i++]; 
-        }
-        else{
-            temp[count++] = arr[j++];
-        }
-    }
-
-    while (i<=m && count <= r)
-    {
-        temp[count++] = arr[i++];
-    }
-    while (j<=r && count <= r)
-    {
-        temp[count++] = arr[j++];
-    }
-    for(int x =0; x<=r; x++)
-    {
-        arr[x] = temp[x];
-    }
-}
-*/
-
 int MergeSort(int arr[], int l, int r)
 {
     if(r > l)
