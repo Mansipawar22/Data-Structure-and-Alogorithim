@@ -17,15 +17,18 @@ int Partition(int arr[], int low, int high)
         }
     }
     swap(arr[i+1], arr[high]);
+    return i+1;
 }
+
 
 
 int main()
 {
-    int arr[] = {10, 80, 30, 90, 40, 50, 70};
+    int arr[] = {10, 80, 30, 90, 70, 40, 50, 70};
     int low = 0;
-    int high = 6;
-    Partition(arr, low, high);
+    int high = 7;
+    int piv = Partition(arr, low, high);
+    Partition(arr, piv+1, high);
     for(int x: arr)
     {
         cout << x << " ";
