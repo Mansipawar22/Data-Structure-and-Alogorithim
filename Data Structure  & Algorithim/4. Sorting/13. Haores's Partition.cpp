@@ -26,6 +26,17 @@ int Partition(int arr[], int low, int high)
     }
 }
 
+int Sort(int arr[], int low, int high)
+{
+    if(low < high)
+    {
+        int pi = Partition(arr, low, high);
+        Sort(arr, low, pi);
+        Sort(arr, pi+1, high);
+    }
+}
+
+
 void PrintArray(int arr[], int high)
 {
     for(int x = 0; x <= high; x++)
@@ -37,12 +48,12 @@ void PrintArray(int arr[], int high)
 
 int main()
 {
-    int arr[] = {5,3,8,4,2,7,1,10};
+    int arr[] = {6, 8,4,7,9,3,10,5};
     int low = 0;
     int high = 7;
 
 
-    Partition(arr, low, high);
+    Sort(arr, low, high);
 
     PrintArray(arr, high);
 
