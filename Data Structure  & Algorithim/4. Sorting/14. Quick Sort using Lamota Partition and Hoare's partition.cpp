@@ -49,7 +49,7 @@ int Quicksort(int arr[], int low, int high)
 {
     if(low < high)
     {
-        int pi = Hoarepartition(arr, low, high);
+        int pi = Lamotapartition(arr, low, high);
         Quicksort(arr, low, pi-1);
         Quicksort(arr, pi+1, high);
 
@@ -66,9 +66,9 @@ int printarray(int arr[], int size)
 }
 int main()
 {
-    int arr[] = {6, 8,4,7,9,3,10,5};
+    int arr[] = {9,5,6,2,7,4,8};
     int low = 0;
-    int high = 7;
+    int high = 6;
     printarray(arr, 8);
     Quicksort(arr, low, high);
     cout << "\n";

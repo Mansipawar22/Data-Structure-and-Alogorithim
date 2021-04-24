@@ -6,7 +6,7 @@ int hoare_partition(int arr[], int low, int high)
 {
     int i = low - 1;
     int j = high + 1;
-    int pivot = arr[high];
+    int pivot = arr[low];
     while (true)
     {
         do
@@ -54,5 +54,10 @@ int main()
     int low = 0;
     int high = 9;
     qSort(arr, low, high);
+    for (int i = 0; i < 10; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    
     return 0;
 }
