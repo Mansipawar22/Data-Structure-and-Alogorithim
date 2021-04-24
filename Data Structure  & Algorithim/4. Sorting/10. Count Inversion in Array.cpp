@@ -88,7 +88,7 @@ int CountInversion(int arr[], int l, int r)
 
 int main()
 {
-    int arr[] = {2,5,8,11,3,6,9,13};
+    int arr[] = {2,5, 6,1,8,11,3,6,9,13};
     int size = sizeof(arr)/sizeof(arr[0]);
     int l = 0;
     int r = size -1;
