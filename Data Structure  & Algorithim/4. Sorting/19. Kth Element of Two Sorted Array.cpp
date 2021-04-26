@@ -47,7 +47,7 @@ int main()
     int arr2[] = { 1, 4, 7, 16, 18};
     int n = 7;
     int m = 5;
-    int k = 9;
+    int k = 5;
     cout << kth_element_of_sorted_array(arr1, arr2, n, m, k);
     return 0;
 }
