@@ -56,6 +56,34 @@ int main()
     cout << s1.find(" is good.") << endl; // used to find the substring form the string. 
     // Note: only return the index of first occurance.
     cout << s1 << endl;
-
+    // second
+    string s2 = "bce";
+    string s3 = "bcd";
+    if(s2 == s3)
+        cout << " both are same" << endl;
+    else if(s2 < s3)
+        cout << "s2 is smaller." << endl;
+    else{
+        cout << "s2 is greater." << endl;
+    }
+    // third
+    // console input from the user.
+    string name;
+    cout << "Enter your name. ";
+    //cin >> name; // cin does not allow to read space in the string that's why ci doesn't read complete name "Prashant panwar",
+    // only read first substring "prashant". to get rid of this c++ stl library provide getline mehtod to read space in the string.
+    getline(cin, name);
+    cout << "your name is " << name << endl;
+    // fourth
+    //Iternating throug string.
+    for (int i = 0; i < s1.length(); i++)
+    {
+        cout << s1[i] << " ";
+    }
+    cout << endl;
+    for(char x: s1)
+    {
+        cout << x << " ";
+    }
     return 0;
 }
