@@ -46,7 +46,7 @@ int KthSmallestElement(int arr[], int size, int k)
 
 int main()
 {
-    int arr[] = {9,5,6,2,7,4,8};
+    int arr[] = {7, 10, 4, 3, 20, 15};
     int size = 6;
     int k = 3;
     cout << KthSmallestElement(arr, size, k);

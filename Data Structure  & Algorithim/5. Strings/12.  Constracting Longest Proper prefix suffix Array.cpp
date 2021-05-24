@@ -35,7 +35,6 @@ int Longest_Proper_prefix_suffix(string &str, int n)
 //     {
 //         lps[i] = Longest_Proper_prefix_suffix(str, i+1);
 //     }
-    
 // }
 
 
