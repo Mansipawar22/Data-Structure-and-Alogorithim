@@ -3,7 +3,7 @@
 using namespace std;
 
 
-//Two pointer Approuch to fid the pair
+//Two pointer Approuch to findd the pair
 bool isPair(int arr[], int size, int num)
 {
     int left = 0;
