@@ -44,4 +44,4 @@ int main()
     cout << isPresent(txt, pat);
     return 0;
 }
-
+        
