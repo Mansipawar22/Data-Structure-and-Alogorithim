@@ -14,7 +14,7 @@ bool areRotations(string &s1, string &s2)
 int main()
 {
     string s1 = "ABCD";
-    string s2 = "CDAb";
+    string s2 = "CDAg";
     cout << areRotations(s1, s2);
     return 0;
 }
