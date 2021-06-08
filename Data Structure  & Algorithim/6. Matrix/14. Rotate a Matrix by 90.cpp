@@ -78,8 +78,19 @@ int main()
             arr[i].push_back(temp);
         }
     }
+    cout << "Actual Matrix Before the Rotation by 90 degree:\n";
+    print(arr, m, n);
+    Rotate_90(arr, m, n);
+    cout << "Rotated Matrix by Nive Solution:\n";
     print(arr, m, n);
     Rotate_90_efficient(arr, m, n);
+    cout << "Rotated Matrix by Efficient Solution:\n";
+    print(arr, m, n);
+    Rotate_90_efficient(arr, m, n);
+    cout << "Rotated Matrix by Efficient Solution:\n";
+    print(arr, m, n);
+    Rotate_90_efficient(arr, m, n);
+    cout << "Rotated Matrix by Efficient Solution:\n";
     print(arr, m, n);
     return 0;
 }

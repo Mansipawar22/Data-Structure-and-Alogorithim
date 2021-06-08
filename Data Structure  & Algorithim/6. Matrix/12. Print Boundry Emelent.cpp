@@ -23,7 +23,7 @@ void print(vector<int> arr[], int m, int n)
         {
             cout << arr[0][i] << " ";
         }
-        for (int i = 0; i < m; i++)
+        for (int i = 1; i < m; i++)
         {
             cout << arr[i][n-1] << " ";
         }
