@@ -17,8 +17,20 @@ using namespace std;
 //Efficient Solution
 //T(n) => O(1)
 //A(s) => O(n);
-int GetSum(int Prefixarray[], int l, int r)
+int GetSum(int arr[], int l, int r, int size)
 {
+    int Prefixarray[size];
+    Prefixarray[0] = arr[0];
+    for (int i = 1; i < size; i++)
+    {
+         Prefixarray[i] = arr[i] + Prefixarray[i-1];
+    }
+    cout << "Prefix Sum Array: " << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << Prefixarray[i] << " ";
+    }
+    cout << endl;
     int sum = 0;
     if (l!=0)
     {
@@ -62,7 +74,7 @@ int main()
     {
         cout << Prefixarray[i] << " ";
     }
-    cout << endl;
-    cout << GetSum(Prefixarray, l, r);
+    
+    cout << GetSum(arr, l, r, size);
     return 0;
 }
