@@ -28,7 +28,7 @@ int main()
     map <int, int> :: iterator itr;
     cout << "The map mp is:\n";
     cout << "KEY\tELEMENT\n";
-    for(itr = mp.begin(); itr != mp.end(); ++itr)
+    for(itr = mp.begin(); itr != mp.end(); itr++)
     {
         cout << itr->first << "\t" << itr->second << endl;
     }
