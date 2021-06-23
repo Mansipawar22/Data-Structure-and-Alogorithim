@@ -19,8 +19,11 @@ Node *deleteHead(Node *head)
     if(head == NULL)
         return NULL;
     else{
-        //Node *temp
-        head = head->next; // Memory leaking
+        Node *temp = head->next; // when we don't want to leak the memory
+            
+        delete head;
+        return temp;
+        //temp = head->next; // Memory leaking whenw e don't want to create new Node.
     }
 }
 
