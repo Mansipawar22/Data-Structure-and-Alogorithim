@@ -27,6 +27,8 @@ Node *deleteHead(Node *head)
     }
 }
 
+
+
 void printlist(Node *head)
 {
     Node *cur = head;
