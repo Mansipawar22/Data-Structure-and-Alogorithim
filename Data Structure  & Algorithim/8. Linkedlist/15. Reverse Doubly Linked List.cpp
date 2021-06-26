@@ -69,10 +69,10 @@ int main()
 {
     Node *head = new Node(10);
     head = insertEnd(head, 20);
-    // head = insertEnd(head, 30);
-    // head = insertEnd(head, 40);
-    // head = insertEnd(head, 50);
-    // head = insertEnd(head, 60);
+    head = insertEnd(head, 30);
+    head = insertEnd(head, 40);
+    head = insertEnd(head, 50);
+    head = insertEnd(head, 60);
     printDLL(head);
     head = reverseDLL(head);
     cout << endl;
