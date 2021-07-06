@@ -35,7 +35,7 @@ struct Myhash
             {
                 return true;
             }
-            i = ( i + 1 ) % cap; // Linea probing
+            i = ( i + 1 ) % cap; // Linear probing
             if(i == h)
             {
                 return false;
