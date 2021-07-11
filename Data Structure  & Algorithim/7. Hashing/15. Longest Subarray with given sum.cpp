@@ -36,15 +36,15 @@ int Maxlength(int arr[], int n, int sum)
     for (int i = 0; i < n; i++)
     {
         presum = presum + arr[i];
-        if(presum== sum)
+        if(presum == sum)
         {
-            res = res + 1;
+            res = i + 1;
         }
         if(map.find(presum) == map.end())
         {
             map.insert({presum, i});
         }
-        if(map.find(presum) != map.end())
+        if(map.find(presum-sum) != map.end())
         {
             res = max(res, i - map[presum - sum]);
         }
