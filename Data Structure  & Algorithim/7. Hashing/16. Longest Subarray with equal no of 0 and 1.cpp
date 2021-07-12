@@ -66,6 +66,6 @@ int main()
 {
     int arr[] = {1,0,1,1,1,0,0};
     int size = sizeof(arr)/sizeof(arr[0]);
-    cout << countO1(arr, size);
+    cout << "Longest subaaray size is:" << countO1(arr, size);
     return 0;
 }

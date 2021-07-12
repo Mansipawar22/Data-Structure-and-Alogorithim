@@ -28,7 +28,6 @@ int Maxlenght(int arr[], int n)
             result = max(result, i-map[presum]);
         }
     }
-    // cout << result<< endl
     return result;
 }
 
