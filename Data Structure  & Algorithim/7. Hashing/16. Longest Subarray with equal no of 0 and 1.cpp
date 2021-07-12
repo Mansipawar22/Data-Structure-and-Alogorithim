@@ -39,7 +39,7 @@ int countO1(int arr[], int size)
     }
     for (int i = 0; i < size; i++)
     {
-        presum = presum + arr[i];
+        presum = presum + arr[i]; 
         if(presum == 0)
         {
             res  = i + 1;
