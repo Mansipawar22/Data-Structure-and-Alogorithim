@@ -84,31 +84,57 @@ void printNbyK3(int arr[], int size, int k)
 //More Effifcient solution
 //T(n) = O(nk)
 // space = O(k)
+
+// void AllCandidateMinusOne(unordered_map<int, int> map, int temp[] , int k)
+// {
+//     for (int i = 0; i < map.size(); i++)
+//     {
+//         map[temp[i]] -= 1;
+//     }
+//     return map;
+// }
+
 void printNbyK4(int arr[], int size, int k)
 {
-    unordered_map<int, int> map;
+    unordered_map<int, int> map1;
+    int temp[k];
+    int count = 0;
     for (int i = 0; i < size; i++)
     {
         // 2.a
-        if(map.find(arr[i]) != map.end())
+        if(map1.find(arr[i]) != map1.end())
         {
-            map[arr[i]] += 1;
+            map1[arr[i]] += 1;
         }
         // 2.b
-        else if (map.size() < k)
+        else if(map1.size() < k-1)
         {
-            map.insert({arr[i], 1});
+            map1.insert({arr[i], 1});
+            temp[count] = arr[i];
+            count++;
         }
         // 2.c
         else{
-            for(auto x: map)
+            for (int i = 0; i < map1.size(); i++)
             {
-                map[x.second] -= 1;
+                map1[temp[i]] -= 1;
             }
         }
     }
 
-    for(auto x: map)
+    cout << "map size: " << map1.size() << endl;
+    // for(int i = 0; i < k; i++)
+    // {
+    //     if(map1.find(temp[i]) != map1.end())
+    //     {
+    //         cout << temp[i] << " "  << "Present in the map. "<< endl;
+    //     }
+    // }
+    for(auto x: map1)
+    {
+        cout << x.first << " " << x.second << endl;
+    }
+    for(auto x: map1)
     {
         int count = 0;
         for (int i = 0; i < size; i++)
@@ -120,7 +146,7 @@ void printNbyK4(int arr[], int size, int k)
         }
         if(count > size/k)
         {
-            cout << x.first << " " << x.second << endl;
+            cout << x.first << " Occure more than n/k times in the array." << endl;
         }
     }
 }
@@ -128,9 +154,20 @@ void printNbyK4(int arr[], int size, int k)
 
 int main()
 {
-    int arr[] = {30, 10, 20, 20, 10, 40, 20, 30, 30};
-    int size = sizeof(arr)/sizeof(arr[0]);
-    int k = 4;
-    printNbyK4(arr, size, k);
+    int arr1[] = {30, 10, 20, 20, 10, 20, 30, 30};
+    int k1 = 4;
+    int size1 = sizeof(arr1)/sizeof(arr1[0]);
+    int arr2[] = {30, 10, 20, 30, 30, 40, 30, 40, 30};
+    int size2 = sizeof(arr2)/sizeof(arr2[0]);
+    int k2 = 2;
+    int arr3[] = {30, 10, 20, 20, 20, 10, 40, 30, 30};
+    int size3 = sizeof(arr3)/sizeof(arr3[0]);
+    int k3 = 4;
+    cout << "=====================First array=======================" << endl;
+    printNbyK4(arr1, size1, k1);
+    cout << "=====================Second array=======================" << endl;
+    printNbyK4(arr2, size2, k2);
+    cout << "=====================Third array=======================" << endl;
+    printNbyK4(arr3, size3, k3);
     return 0;
 }
