@@ -84,5 +84,6 @@ int main()
     head = reverseEfficient(head);
     cout << endl;
     printLL(head);
+    cout << "Succesfully reversed LinkedList." << endl;
     return 0;
 }
