@@ -85,5 +85,6 @@ int main()
     cout << endl;
     printLL(head);
     cout << "Succesfully reversed LinkedList." << endl;
+    cout << "Pushing is working perfectly." << endl;
     return 0;
 }
