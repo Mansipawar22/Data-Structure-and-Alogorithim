@@ -19,9 +19,6 @@ int findGCD1(int a, int b)
         }
         
     }
-    //cout << m << endl;
-
-    //cout << res << endl;
     return res;
 }
 
