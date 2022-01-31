@@ -65,7 +65,7 @@ int Left_Most_Repeat_Efficient(string &str)
         else{
             visited[str[i]] = true;
         }
-    }
+    }  
     return res;
 }
 

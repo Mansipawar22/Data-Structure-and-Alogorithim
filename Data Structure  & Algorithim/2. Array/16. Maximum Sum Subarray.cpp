@@ -24,6 +24,7 @@ int maxSumSubarray(int arr[], int size)
 //Efficient Solution
 //T(n)=> O(n)
 //A(s)=> O(1)
+//Kadence Algorithim.
 int maxSumSubarray2(int arr[], int size)
 {
     int res = arr[0];
@@ -38,7 +39,8 @@ int maxSumSubarray2(int arr[], int size)
 
 int main()
 {
-    int arr[] = {-3, 8, -2, 4, -5, 6};
+    int arr[] = {-3, -8, -2, -4, -5, 6 };
+
 
     cout << maxSumSubarray2(arr, sizeof(arr)/sizeof(arr[0]));
     return 0;
