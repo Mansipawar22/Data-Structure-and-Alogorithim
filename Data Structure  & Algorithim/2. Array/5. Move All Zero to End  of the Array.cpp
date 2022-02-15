@@ -26,25 +26,38 @@ int moveZero(int arr[], int size)
 }
 
 //Efficient Solution
-int moveZero1(int arr[], int size)
+// int moveZero1(int arr[], int size)
+// {
+//     int count = 0;
+//     for(int i = 0; i < size; i++)
+//     {
+//         if(arr[i] != 0)
+//         {
+//             swap(arr[i], arr[count]);
+//             count++;
+//         }
+//     }
+// }
+
+int moveallZeroEnd(int arr[], int size)
 {
     int count = 0;
-    for(int i = 0; i < size; i++)
+    for (int  i = 0; i < size; i++)
     {
+        /* code */
         if(arr[i] != 0)
         {
             swap(arr[i], arr[count]);
             count++;
         }
     }
+        
 }
-
-
 
 int main()
 {
     int arr[] = {8, 5, 0, 10, 0, 20, 0,3,7,0,5,0,0,7,0,5,0};
-    moveZero1(arr, sizeof(arr)/sizeof(arr[0]));
+    moveallZeroEnd(arr, sizeof(arr)/sizeof(arr[0]));
     for(int i = 0; i<sizeof(arr)/sizeof(arr[0]);i++)
     {
         cout <<" " << arr[i];

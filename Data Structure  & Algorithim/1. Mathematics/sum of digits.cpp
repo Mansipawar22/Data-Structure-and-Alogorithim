@@ -9,7 +9,7 @@ int main()
     long int sum, x, y, num;
 
     cout << "Enter number of test cases. ";
-    cin >> t;E
+    cin >> t;
     {
         cin >> num;
         sum = 0;

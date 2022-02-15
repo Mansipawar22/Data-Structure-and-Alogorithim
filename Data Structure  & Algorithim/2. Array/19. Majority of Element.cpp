@@ -77,6 +77,48 @@ int FindMajority(int arr[], int size)
    
 }
 
+//practice
+int findmajority(int arr[], int size)
+{
+    //Phase 1
+    int majority = 0;
+    int count = 1;
+    for (int i = 0; i < size; i++)
+    {
+        if(arr[majority] == arr[i])
+        {
+            count += 1;
+        }
+        else{
+            count -=1;
+        }
+        if(count == 0)
+        {
+            majority = i;
+            count += 1;
+        }
+    }
+    
+    //phase 2
+    count = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if(arr[majority] == arr[i])
+        {
+            count += 1;
+        }
+    }
+    if(count > size/2)
+    {
+        return majority;
+    }
+    else{
+        return -1;
+    }
+    
+}
+
+
 
 
 int main()
@@ -88,6 +130,6 @@ int main()
     for (int i = 0; i < size; i++)
         cin >> arr[i];
         
-    cout << "Element " << FindMajority(arr, size) << " have the Majority in the Array.";
+    cout << "Element " << findmajority(arr, size) << " have the Majority in the Array.";
     return 0;
 }

@@ -33,7 +33,7 @@ int Nth_prime_number(int n)
         if(count != n)
         {
             num++;
-        }
+        } 
     }
     
     return num;

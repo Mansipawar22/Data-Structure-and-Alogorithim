@@ -1,4 +1,4 @@
-#include<iostream>
+// #include<iostream>
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -34,8 +34,8 @@ int isPair(int arr[], int size)
 
 int main()
 {
-    int arr[] = {0, -1,-4 ,2, 3, -4 ,-1, 5, 2, -5,-5, 4};
-    int size = 12;
+    int arr[] = {0, -1, 2, -3, 1};
+    int size = 5;
     cout << isPair(arr, size);
     return 0;
 }
