@@ -56,13 +56,18 @@ int main()
     printlist(head);cout<<endl;
     head = insertionatposition(head, 1, 10);
     printlist(head);cout<<endl;
-    head->next = new Node(38);
+    head->next = new Node(20);
     printlist(head);cout<<endl;
-    head->next->next = new Node(48);
+    head->next->next = new Node(30);
+    head->next->next->next = new Node(40);
+    head->next->next->next->next = new Node(50);
+    head->next->next->next->next->next = new Node(60);
     printlist(head);cout<<endl;
-    head = insertionatposition(head, 1, 5);
+    head = insertionatposition(head, 5, 70);
     printlist(head);cout<<endl;
-    head = insertionatposition(head, 6, 51);
-    printlist(head);cout<<endl;
+    // head = insertionatposition(head, 1, 5);
+    // printlist(head);cout<<endl;
+    // head = insertionatposition(head, 6, 51);
+    // printlist(head);cout<<endl;
     return 0;
 }

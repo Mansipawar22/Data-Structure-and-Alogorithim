@@ -33,6 +33,26 @@ Node *inserthead(Node *head, int d)
     return temp;
 }
 
+// Node *inserthead1(Node *head, int d)
+// {
+//     Node *temp = new Node(d);
+//     if(head == NULL)
+//     {
+//         temp->next = temp;
+//         return temp;
+//     }
+
+//     Node *cur=head;
+//     while(cur->next != head)
+//     {
+//         cur = cur->next;
+//     }
+//     temp->next = head;
+//     cur->next = temp;
+//     return temp;
+// }
+
+
 // Efficient Solution
 Node *insertheadefficiently(Node *head, int d)
 {
@@ -88,10 +108,15 @@ void printCLL(Node *head)
 int main()
 {
     Node *head = NULL;
-    head = inserthead(head, 10);
+    head = inserthead(head, 6);
+    head = inserthead(head, 5);
+    head = inserthead(head, 4);
+    head = inserthead(head, 3);
+    head = inserthead(head, 2);
+    printCLL(head);
     // head = inserthead(head, 9);
     // head = insertheadefficiently(head, 8);
-    head = insertendefficiently(head, 11);
-    printCLL(head);
+    // head = insertendefficiently(head, 11);
+    
     return 0;
 }

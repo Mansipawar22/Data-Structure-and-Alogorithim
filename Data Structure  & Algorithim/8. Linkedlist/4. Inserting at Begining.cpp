@@ -3,7 +3,24 @@
 using namespace std;
 
 
-struct Node
+// struct Node
+// {
+//     int data;
+//     Node *next;
+//     Node(int x)
+//     {
+//         data = x;
+//         next = NULL;
+//     }
+// };
+
+// Node *insertBegin(Node *head, int x)
+// {
+//     Node *temp = new Node(x);
+//     temp->next = head;
+//     return temp;
+// }
+struct  Node
 {
     int data;
     Node *next;
@@ -16,9 +33,9 @@ struct Node
 
 Node *insertBegin(Node *head, int x)
 {
-     Node *temp = new Node(x);
-     temp->next = head;
-     return temp;
+    Node *temp = new Node(x);
+    temp->next = head;
+    return temp;
 }
 
 

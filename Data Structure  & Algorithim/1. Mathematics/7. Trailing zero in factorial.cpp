@@ -30,12 +30,16 @@ int countZero1(long n)
 }
 
 //Recursive method
+//T(n) = O(log5(n))
 int countZero2(int n)
 {
     int res = 0;
-    for(int i = 5; i <= n; i = i*5)
+    for(int i = 5; i <= n; i = i*5) // if n =  128
     {
-      res = res + n/i;  
+      res = res + n/i;
+      /* 128/5 = 25, 128/25 = 5, 128/125 = 1
+      res = 25 + 5 + 1
+      */
     }
     return res;
 }

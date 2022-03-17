@@ -64,23 +64,23 @@ Node *reverseDLL(Node *head)
     
 }
 
-Node *deleteHead(Node *head)
-{
-    if(head == NULL)
-    {
-        return NULL;
-    }
-    if(head->next == NULL)
-    {
-        free(head);
-        return NULL;
-    }
-    Node *temp = head;
-    head->next->prev = NULL;
-    head = head->next;
-    free(temp);
-    return head;
-}
+// Node *deleteHead(Node *head)
+// {
+//     if(head == NULL)
+//     {
+//         return NULL;
+//     }
+//     if(head->next == NULL)
+//     {
+//         free(head);
+//         return NULL;
+//     }
+//     Node *temp = head;
+//     head->next->prev = NULL;
+//     head = head->next;
+//     free(temp);
+//     return head;
+// }
 
 Node *deleteEnd(Node *head)
 {
@@ -115,9 +115,9 @@ int main()
     head = reverseDLL(head);
     cout << endl;
     printDLL(head);
-    head = deleteHead(head);
-    head = deleteEnd(head);
-    cout << endl;
-    printDLL(head);
+    // head = deleteHead(head);
+    // head = deleteEnd(head);
+    // cout << endl;
+    // printDLL(head);
     return 0;
 }

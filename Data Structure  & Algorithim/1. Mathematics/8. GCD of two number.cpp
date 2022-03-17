@@ -60,6 +60,6 @@ int main()
     cin >> y;
     cout << "1. GCD of these two number is :" << findGCD1(x,y) << endl;
     cout << "2. GCD of these two number is :" << findGCD2(x,y) << endl;
-    cout << "3. GCD of these two number is :" << findGCD3(x,y) << endl;
+    cout << "3. 00GCD of these two number is :" << findGCD3(x,y) << endl;
     return 0;
 }
